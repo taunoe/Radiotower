@@ -1,0 +1,61 @@
+{
+    "configurations": [
+        {
+            "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/home/taunoerik/Documents/MyGitHub/Radiotower/include",
+                "/home/taunoerik/Documents/MyGitHub/Radiotower/src",
+                "/home/taunoerik/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "/home/taunoerik/.platformio/packages/framework-arduino-avr/variants/standard",
+                "/home/taunoerik/.platformio/lib/M62429",
+                "/home/taunoerik/.platformio/lib/PU2CLR RDA5807_ID2500",
+                "/home/taunoerik/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "/home/taunoerik/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "/home/taunoerik/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "/home/taunoerik/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "/home/taunoerik/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "/home/taunoerik/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/taunoerik/Documents/MyGitHub/Radiotower/include",
+                    "/home/taunoerik/Documents/MyGitHub/Radiotower/src",
+                    "/home/taunoerik/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "/home/taunoerik/.platformio/packages/framework-arduino-avr/variants/standard",
+                    "/home/taunoerik/.platformio/lib/M62429",
+                    "/home/taunoerik/.platformio/lib/PU2CLR RDA5807_ID2500",
+                    "/home/taunoerik/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "/home/taunoerik/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "/home/taunoerik/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "/home/taunoerik/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "/home/taunoerik/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "/home/taunoerik/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=40304",
+                "ARDUINO_AVR_LILYPAD",
+                "F_CPU=8000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega328P__",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "/home/taunoerik/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
