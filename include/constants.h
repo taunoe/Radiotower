@@ -13,6 +13,9 @@ const int MUTE_PIN = 4;         // Amplifier mute pin
 const int VOLUME_DT_PIN = 9;    // FM62429 Data pins (Volume control)
 const int VOLUME_CLK_PIN = 10;  // FM62429 Clock pins
 
+const int RE_CLK_PIN = 6;       // Rotary Encoder Clock pin (A)
+const int RE_DT_PIN = 5;        // Rotary Encoder Data pin (B)
+
 const int TONE_PIN = 11;
 
 const int MIN_VOLUME = 30;      // Value: 0-100

@@ -55,6 +55,42 @@ void amp_off(){
   DEBUG_PRINTLN("Amp OFF!");
 }
 
+
+/**
+ * Function to read rotary encoder turn direction
+ * Returns: -1, 0, or 1
+ * -1 == Right turn
+ *  1 == Left turn
+ *  0 == No turn
+ **/
+int get_encoder_turn() {
+  /**
+   * The static keyword is used to create variables that are visible to only one function. 
+   * However unlike local variables that get created and destroyed every time a function is called, 
+   * static variables persist beyond the function call, preserving their data between function calls.
+   * Variables declared as static will only be created and initialized the first time a function is called. 
+   **/
+  static int old_a = 1;
+  static int old_b = 1;
+  int result = 0;
+  int new_a = digitalRead(RE_CLK_PIN);
+  int new_b = digitalRead(RE_DT_PIN);
+
+  // If the value of CLK pin or the DT pin has changed
+  if (new_a != old_a || new_b != old_b) {
+    if (old_a == 1 && new_a == 0) {
+      result = (old_b * 2 - 1);
+    }
+  }
+
+  old_a = new_a;
+  old_b = new_b;
+
+  return result;
+}
+
+
+
 int i = 0;
 
 void setup() {
@@ -70,6 +106,9 @@ void setup() {
   pinMode(MUTE_PIN, OUTPUT);
   pinMode(VOLUME_CLK_PIN, OUTPUT);
   pinMode(VOLUME_DT_PIN, OUTPUT);
+  // Input Pins setup
+  pinMode(RE_CLK_PIN, INPUT);
+  pinMode(RE_DT_PIN, INPUT);
 
   set_volume(volume_level);
 
@@ -95,8 +134,26 @@ void setup() {
 }
 
 void loop() {
+  int rotate = get_encoder_turn();
+
+  // Left turn
+  if (rotate > 0) {  
+    //DEBUG_PRINT(rotate);
+    --i;
+    DEBUG_PRINT(i);
+    DEBUG_PRINTLN(" Left turn");
+  }
+  // Right turn
+  else if (rotate < 0) {
+    //DEBUG_PRINT(rotate);
+    ++i;
+    DEBUG_PRINT(i);
+    DEBUG_PRINTLN(" Right turn");
+  }
+/*
   Serial.print(i);
   Serial.print(" ");
   i++;
   delay(500);
+  */
 }
